@@ -12,20 +12,139 @@ GOOGLE FONTS
 font-family: 'Poppins', sans-serif;
 font-family: 'Pacifico', cursive;
 
+
 */
+
 
 /* UNIVERSAL STYLES */
 
+h1,
+h2 {
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 800;
+}
 
-/* MOBILE VIEW */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
+h2 {
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+p,
+li,
+a {
+    font-family: 'Poppins', cursive;
+    font-weight: 400;
+}
+
+h1,
+h2,
+li,
+p,
+a {
+    color: #eeeaeb;
+}
+
+li,
+.button {
+    text-transform: uppercase;
+}
+
+.container {
+    background-image: url(../img/grapefruit-bg-compressed.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.button {
+    background-color: #20abad;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1.2rem;
+}
+
+.hero-banner {
+    background-color: #20abad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.arrow {
+    width: 1em;
+}
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
-
+    a {
+        text-decoration: none;
+    }
 }
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
-    
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20rem;
+        margin-left: 30rem;
+    }
+
+    h1 {
+        margin-top: 1.5rem;
+    }
+
+    ul {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        gap: 12rem;
+    }
+
+
+    ul li:hover>ul,
+    ul li:focus-within>ul,
+    ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    ul ul {
+        position: absolute;
+        top: 100%;
+        display: none;
+        margin: 0;
+        padding: 0.313rem 0.625rem;
+    }
+
+    ul ul li {
+        display: block;
+    }
+
+    .dropdown {
+        display: flex;
+        gap: 0.5rem;
+        position: relative;
+    }
+
 }
